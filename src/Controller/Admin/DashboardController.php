@@ -2,6 +2,8 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Photo;
+use App\Entity\Session;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -36,8 +38,11 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::section('Utilisateur');
-        yield MenuItem::linkToCrud('Créer utilisateur', 'fa fa-user', User::class);
+        yield MenuItem::section('Clients:');
+        yield MenuItem::linkToCrud('Créer une Session', 'fas fa-calendar', Session::class);
+        yield MenuItem::linkToCrud('Créer un compte client', 'fa fa-user', User::class);
+        yield MenuItem::section('Télécharger les photos:');
+        yield MenuItem::linkToCrud('Importer des photos', 'fas fa-camera', Photo::class);
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }
 }

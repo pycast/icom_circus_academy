@@ -25,6 +25,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string')]
     private $password;
 
+    #[ORM\ManyToOne(targetEntity: Session::class, inversedBy: 'users')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $Session;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -93,5 +97,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getSession(): ?Session
+    {
+        return $this->Session;
+    }
+
+    public function setSession(?Session $Session): self
+    {
+        $this->Session = $Session;
+
+        return $this;
     }
 }

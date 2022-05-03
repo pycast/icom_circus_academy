@@ -3,11 +3,107 @@
 {% block title %}Recevoir l'académie{% endblock %}
 
 {% block body %}
-<h3>Vous souhaitez recevoir l'académie</h3>
+<h2>Vous êtes une commune ou un accueil de loisir et vous voulez accueillir notre académie</h2>
+<h4>Voici les conditions pour nous accueillir.</h4>
 
--> Conditions de réception
+<br>
 
--> Disponibilités
+<div class="container">
+  <div class="row">
+    <h5><u>Emplacement requis</u></h5>
+    <ul>
+      <li>Terrain de 50 x 31m</li>
+      <li>Possibilité de faire des trous de 60x5cm</li>
+      <li>Arrivée d'eau</li>
+      <li>Arricée d'électricité</li>
+      <li>Toilettes</li>
+      <li>Arrivée 3 à 4 jours avant le début du camp</li>
+      <li>Départ de 2 à 3 jours après la fin</li>
+    </ul>
+  </div>
+  <br>
+  <div class="row">
+    <h5><u>Transport du matériel</u></h5>
+    <p>Nous utilisons des véhicules de grande taille, veillez à ce qu'ils puissent accéder au terrain</p>
+    <ul>
+      <li>1 camion semi + semi remorque 15m</li>
+      <li>1 remorque chapiteau 9m</li>
+      <li>1 camionnette avec caravane 11m</li>
+      <li>1 voiture avec caravane 8m</li>
+      <li>1 remorque matériel 4.5m</li>
+      <li>1 caravane 5m</li>
+      <li>1 caravane 6m</li>
+    </ul>
+  </div>
+  <br>
+  <div class="row">
+    <h5><u>Chapiteau Spectacle:</u></h5>
+    <div class="col">
+      Dimensions :
 
+      22m de diamètre
+      maintenus par de grands mats de 11.5m de haut
+    </div>
+    <div class="col">
+      <img src="{{asset('build/images/chap2.png') }}" alt="Chapiteau Spectacle"
+      width="500px">
+    </div>
+    
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col">
+      <img src="{{asset('build/images/chap1.png') }}" alt="Chapiteau Réfectoire" width="500px">
+    </div>
+    <div class="col">
+      <h5><u>Chapiteau Réfectoire:</u></h5>
+      Dimension :
+
+      10mx8m
+      Servira de réfectoire mais aussi d’espace d’entrainement
+    </div>
+  </div>
+
+  <div class="row">
+    <h3>Nos tarifs</h3>
+
+    <table class="table table-hover">
+      <thead class="table-transparent">
+        <tr>
+          <th>Nombre d'enfants</th>
+          <th>Tarif HT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>De 50 à 70 enfants</td>
+          <td>6750€</td>
+        </tr>
+        <tr>
+          <td>De 70 à 100 enfants</td>
+          <td>8550€</td>
+        </tr>
+        <tr>
+          <td>De 100 à 120 enfants</td>
+          <td>9700€</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row">
+    <h4>Ces tarifs prennent en compte :</h4>
+    <br>
+    <br>
+    <ul>
+      <li>Le montage et le démontage du chapiteau</li>
+      <li>Le transport du convois</li>
+      <li>La prise en charge des enfants par les moniteurs tout au long de la semaine</li>
+      <li>La location du matériel de cirque</li>
+      <li>Un goûter chaque après-midi (boisson & friandises)</li>
+      <li>La mise à disposition de nos infrastructures pour le spectacle des enfants (chapiteau, gradin, lumières...)</li>
+    </ul>
+  </div>
+</div>
 
 {% endblock %}
