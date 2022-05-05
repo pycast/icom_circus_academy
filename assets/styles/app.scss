@@ -17,7 +17,7 @@
 
 body{
     min-height: 100vh;
-    background: linear-gradient(to right top, var(--circus-purple), var(--circus-blue));
+    background: linear-gradient(to right top, var(--circus-blue), var(--circus-green), var(--circus-blue));
     color: black;
     position: relative;
 }
@@ -47,7 +47,7 @@ footer{
     background-size: cover;
     color: white;
     text-align: center;
-    padding: 30vh 0;
+    padding: 20vh 0;
     font-family: var(--ff-title);
 }
 
@@ -57,8 +57,8 @@ footer{
     border-radius: 50%;
     background-color: var(--circus-yellow);
     align-items: center;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -66,8 +66,8 @@ footer{
     border-radius: 50%;
     background-color: var(--circus-red);
     align-items: center;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -75,8 +75,8 @@ footer{
     border-radius: 50%;
     background-color: var(--circus-purple);
     align-items: center;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -85,7 +85,7 @@ footer{
 }
 
 .highlight{
-    font-size: 38px;
+    font-size: 25px;
     align-items: center;
     text-align: center;
 }
@@ -97,7 +97,7 @@ footer{
     background-image: url(/assets/images/cirque_enfants.png);
     background-size: cover;
     background-blend-mode: multiply;
-    padding: 15vh 0;
+    padding: 20vh 0;
 }
 
 .cropped1 {
@@ -110,11 +110,7 @@ footer{
 .row-pedagogie{
     background-color: rgba(255, 57, 57);
     font-family: var(--ff-main);
-    font-size: 2rem;
-}
-
-.rowcustom h1 {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .rowcustom img {
