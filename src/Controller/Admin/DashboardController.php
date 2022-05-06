@@ -23,11 +23,13 @@ class DashboardController extends AbstractDashboardController
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
-        $url = $this->adminUrlGenerator
-            ->setController(UserCrudController::class)
-            ->generateUrl();
+    //     $url = $this->adminUrlGenerator
+    //         ->setController(UserCrudController::class)
+    //         ->generateUrl();
 
-        return $this->redirect($url);
+    //     return $this->redirect($url);
+
+    return $this->render('admin/index.html.twig');
     }
 
     public function configureDashboard(): Dashboard
