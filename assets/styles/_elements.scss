@@ -1,0 +1,38 @@
+body{
+    min-height: 100vh;
+    // background: linear-gradient(to right top, var(--circus-purple), var(--circus-blue));
+    color: black;
+    position: relative;
+    font-size: 16px;
+}
+
+.navbar {
+    background-color: black;
+    font-size: 28px;
+
+    .login {
+        fill:"green";
+        opacity: 1;
+        width:16px;
+    }
+
+    .login:hover{
+        fill:#f1f1f1;
+        transition: 0.2s ease-in-out;
+    }
+
+    // .navbar a {
+
+    // }
+}
+
+.body{
+    margin-bottom: 150px;
+}
+
+footer{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.596);
+}

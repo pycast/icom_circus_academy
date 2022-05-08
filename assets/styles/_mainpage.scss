@@ -1,0 +1,108 @@
+/* PARALAX ACCUEIL */
+
+.present {
+    background-color: #333;
+    background-image: url(/assets/images/img1.png);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 30vh 0;
+    font-family: var(--ff-title);
+}
+
+/* LES POINTS IMPORTANTS */
+
+.highlight1 {
+    border-radius: 50%;
+    background-color: var(--circus-yellow);
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.highlight2 {
+    border-radius: 50%;
+    background-color: var(--circus-red);
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.highlight3 {
+    border-radius: 50%;
+    background-color: var(--circus-purple);
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.highlight img {
+    max-width: 200px;
+}
+
+.highlight{
+    font-size: 25px;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* PEDAGOGIE */
+
+.equipe-peda {
+    background-color: rgb(99, 99, 99);
+    background-image: url(/assets/images/cirque_enfants.png);
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding: 20vh 0;
+}
+
+.cropped1 {
+    width: 700px; /* width of container */
+    height: 700px; /* height of container */
+    object-fit: cover;
+}
+
+
+.row-pedagogie{
+    background-color: rgba(255, 57, 57);
+    font-family: var(--ff-main);
+    font-size: 24px;
+}
+
+/* TEAM ANIM */
+
+.teamanim .col {
+    background-color: var(--circus-purple);
+}
+
+.teamanim h1 {
+    font-family: var(--ff-title);
+}
+
+.teamanim img {
+    height: 250px;
+    width: auto;
+    clip-path: circle();
+}
+
+/* ACTIVITES */
+
+.activitiescstm p {
+    font-size: 25px;
+    font-family: var(--ff-main);
+}
+
+.activitiescstm h1 {
+    font-family: var(--ff-title);
+}
+
+.activitiescstm img {
+    object-fit: cover;
+    object-position: center;
+}
