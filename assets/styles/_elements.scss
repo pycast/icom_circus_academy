@@ -11,19 +11,23 @@ body{
     font-size: 28px;
 
     .login {
-        fill:"green";
+        fill:white;
         opacity: 1;
         width:16px;
     }
 
     .login:hover{
-        fill:#f1f1f1;
+        fill:#3f3f3f;
         transition: 0.2s ease-in-out;
     }
 
-    // .navbar a {
-
-    // }
+    a {
+        color: white
+    }
+    
+    a:hover {
+        color: #3f3f3f
+    }
 }
 
 .body{

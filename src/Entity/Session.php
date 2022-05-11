@@ -27,13 +27,17 @@ class Session
     #[ORM\Column(type: 'string', length: 255)]
     private $slug;
 
-    #[ORM\OneToMany(mappedBy: 'session', targetEntity: User::class)]
+    #[ORM\OneToMany(mappedBy: 'Session', targetEntity: User::class)]
     private $users;
+
+    #[ORM\ManyToMany(targetEntity: Article::class, mappedBy: 'Session')]
+    private $articles;
 
     public function __construct()
     {
         $this->photos = new ArrayCollection();
         $this->users = new ArrayCollection();
+        $this->articles = new ArrayCollection();
     }
 
     public function __toString()
@@ -137,6 +141,33 @@ class Session
             if ($user->getSession() === $this) {
                 $user->setSession(null);
             }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Article>
+     */
+    public function getArticles(): Collection
+    {
+        return $this->articles;
+    }
+
+    public function addArticle(Article $article): self
+    {
+        if (!$this->articles->contains($article)) {
+            $this->articles[] = $article;
+            $article->addSession($this);
+        }
+
+        return $this;
+    }
+
+    public function removeArticle(Article $article): self
+    {
+        if ($this->articles->removeElement($article)) {
+            $article->removeSession($this);
         }
 
         return $this;

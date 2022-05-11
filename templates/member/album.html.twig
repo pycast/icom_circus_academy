@@ -1,25 +1,48 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Album Photo - Icom Circus{% endblock %}
+{% block title %}Album Photo - Icom Circus
+{% endblock %}
 
 {% block body %}
 
-<a href="{{ path('app_member') }}"> <button type="button" class="btn btn-info">Retour au blog de l'espace Parent</button></a>
+	<a href="{{ path('app_member') }}">
+		Retour au blog de l'espace Parent
+	</a>
 
-<h1>Consulter l'album de la session de votre enfant:</h1>
+	<h1>Consulter l'album de la session de votre enfant:</h1>
 
-<div class="container">
-    <div class="row">
-        {% for photo in photos %}
+	<div class="container p-5">
+		<div class="row">
+			{% for photo in photos %}
 
-                <div class="col-md-4">
-                    <img src="/uploads/{{photo.photoName}}" alt="" class="img-fluid">
-                </div>
+				<div class="col-md-4 modalcustom">
+					<a data-bs-toggle="modal" data-bs-target="#myModal{{photo.id}}">
+						<img src="/uploads/{{photo.photoName}}" alt="" height="350px">
+					</a>
+				</div>
+				<!-- Modal -->
+				<div class="modal fade" id="myModal{{photo.id}}" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="myModalLabel">Votre photo</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<img src="/uploads/{{photo.photoName}}" alt="" class="img-fluid">
+								<p>{{photo.description}}</p>
+								<p class="text-disabled">{{photo.date|date("d/m/Y")}}</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fermer</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
 
-        {% endfor %}
-
-    </div>
-</div>
+		</div>
+	</div>
 
 
 {% endblock %}

@@ -1,110 +1,118 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Recevoir l'académie{% endblock %}
+{% block title %}Recevoir l'académie
+{% endblock %}
 
 {% block body %}
+	<div class="container">
+		<div class="row productfocus">
+			<div class="col">
+				<h2>Vous êtes une commune ou un accueil de loisir et vous voulez accueillir notre académie</h2>
+				<h4>Voici les conditions pour nous accueillir.</h4>
+			</div>
+			<div class="col"></div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<h5>
+					<u>Emplacement requis</u>
+				</h5>
+				<ul>
+					<li>Terrain de 50 x 31m</li>
+					<li>Possibilité de faire des trous de 60x5cm</li>
+					<li>Arrivée d'eau</li>
+					<li>Arricée d'électricité</li>
+					<li>Toilettes</li>
+					<li>Arrivée 3 à 4 jours avant le début du camp</li>
+					<li>Départ de 2 à 3 jours après la fin</li>
+				</ul>
+			</div>
+			<div class="col">
+				<h5>
+					<u>Transport du matériel</u>
+				</h5>
+				<p>Nous utilisons des véhicules de grande taille, veillez à ce qu'ils puissent accéder au terrain</p>
+				<ul>
+					<li>1 camion semi + semi remorque 15m</li>
+					<li>1 remorque chapiteau 9m</li>
+					<li>1 camionnette avec caravane 11m</li>
+					<li>1 voiture avec caravane 8m</li>
+					<li>1 remorque matériel 4.5m</li>
+					<li>1 caravane 5m</li>
+					<li>1 caravane 6m</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row m-5">
+			<h5>
+				<u>Chapiteau Spectacle:</u>
+			</h5>
+			<div class="col">Dimensions :22m de diamètre maintenus par de grands mats de 11.5m de haut
+			</div>
+			<div class="col">
+				<img src="{{asset('build/images/chap2.png') }}" alt="Chapiteau Spectacle" width="500px">
+			</div>
 
-<br>
+		</div>
+		<div class="row  m-5">
+			<div class="col">
+				<img src="{{asset('build/images/chap1.png') }}" alt="Chapiteau Réfectoire" width="500px">
+			</div>
+			<div class="col">
+				<h5>
+					<u>Chapiteau Réfectoire:</u>
+				</h5>
+				Dimension : 10mx8m Servira de réfectoire mais aussi d’espace d’entrainement
+			</div>
+		</div>
 
-<div class="container">
-  <div class="row productfocus">
-    <div class="col">
-    <h2>Vous êtes une commune ou un accueil de loisir et vous voulez accueillir notre académie</h2>
-    <h4>Voici les conditions pour nous accueillir.</h4>
-    </div>
-    <div class="col">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <h5><u>Emplacement requis</u></h5>
-      <ul>
-        <li>Terrain de 50 x 31m</li>
-        <li>Possibilité de faire des trous de 60x5cm</li>
-        <li>Arrivée d'eau</li>
-        <li>Arricée d'électricité</li>
-        <li>Toilettes</li>
-        <li>Arrivée 3 à 4 jours avant le début du camp</li>
-        <li>Départ de 2 à 3 jours après la fin</li>
-      </ul>
-    </div>  
-    <div class="col">
-      <h5><u>Transport du matériel</u></h5>
-      <p>Nous utilisons des véhicules de grande taille, veillez à ce qu'ils puissent accéder au terrain</p>
-      <ul>
-        <li>1 camion semi + semi remorque 15m</li>
-        <li>1 remorque chapiteau 9m</li>
-        <li>1 camionnette avec caravane 11m</li>
-        <li>1 voiture avec caravane 8m</li>
-        <li>1 remorque matériel 4.5m</li>
-        <li>1 caravane 5m</li>
-        <li>1 caravane 6m</li>
-      </ul>
-    </div>
-  <div class="row">
-    <h5><u>Chapiteau Spectacle:</u></h5>
-    <div class="col">
-      Dimensions :
-      22m de diamètre
-      maintenus par de grands mats de 11.5m de haut
-    </div>
-    <div class="col">
-      <img src="{{asset('build/images/chap2.png') }}" alt="Chapiteau Spectacle"
-      width="500px">
-    </div>
-    
-  </div>
-  <div class="row">
-    <div class="col">
-      <img src="{{asset('build/images/chap1.png') }}" alt="Chapiteau Réfectoire" width="500px">
-    </div>
-    <div class="col">
-      <h5><u>Chapiteau Réfectoire:</u></h5>
-      Dimension :
+		<div class="p-3 text-center m-5">
+			<h1 class="fw-normal">Nos tarifs</h1>
+			<p class="fs-5 text-muted">
+				Ils prennent en compte le montage et le démontage du chapiteau, le transport du convois, la prise en charge des enfants par les moniteurs,la location du matériel, un goûter chaque après-midi (boisson & friandises), la mise à disposition de nos infrastructures pour le spectacle des enfants (chapiteau, gradin, lumières...)
+			</p>
+		</div>
+		<div class="row text-center">
+			<div class="col">
+				<div class="card mb-4 rounded-3 shadow-sm">
+					<div class="card-body">
+						<h1 class="card-title">50 à 70<small class="text-muted fw-light">
+								enfants</small>
+						</h1>
+						<p>6750€</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card mb-4 rounded-3 shadow-sm">
+					<div class="card-body">
+						<h1 class="card-title">70 à 100<small class="text-muted fw-light">
+								enfants</small>
+						</h1>
+						<p>8550€</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card mb-4 rounded-3 shadow-sm">
+					<div class="card-body">
+						<h1 class="card-title">100 à 120<small class="text-muted fw-light">
+								enfants</small>
+						</h1>
+						<p>9700€</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row p-5">
+			<div class="col">
+				<div class="jsinfo" data-cal-data="{{data}}"></div>
+				<div id="calendar"></div>
+			</div>
+			<div class="col">
+				<p>consultez ici les disponibilités</p>
 
-      10mx8m
-      Servira de réfectoire mais aussi d’espace d’entrainement
-    </div>
-  </div>
-
-  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-  <h1 class="display-4 fw-normal">Nos tarifs</h1>
-  <p class="fs-5 text-muted"> Ils prennent en compte 
-      le montage et le démontage du chapiteau,
-      le transport du convois,
-      la prise en charge des enfants par les moniteurs,
-      la location du matériel,
-      un goûter chaque après-midi (boisson & friandises),
-      la mise à disposition de nos infrastructures pour le spectacle des enfants (chapiteau, gradin, lumières...)
-      </p>
-  </div>
-
-  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-    <div class="col">
-      <div class="card mb-4 rounded-3 shadow-sm">
-        <div class="card-body">
-          <h1 class="card-title pricing-card-title">50 à 70<small class="text-muted fw-light"> enfants</small></h1>
-          <p>6750€</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card mb-4 rounded-3 shadow-sm">
-        <div class="card-body">
-          <h1 class="card-title pricing-card-title">70 à 100<small class="text-muted fw-light"> enfants</small></h1>
-          <p>8550€</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card mb-4 rounded-3 shadow-sm">
-        <div class="card-body">
-          <h1 class="card-title pricing-card-title">100 à 120<small class="text-muted fw-light"> enfants</small></h1>
-          <p>9700€</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+			</div>
+		</div>
+	</div>
 {% endblock %}

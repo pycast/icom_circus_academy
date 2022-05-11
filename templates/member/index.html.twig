@@ -1,11 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Espace Parent - Icom Circus{% endblock %}
+{% block title %}Espace Parent - Icom Circus
+{% endblock %}
 
 {% block body %}
+	<a href="{{ path('app_member_album') }}">Accèder à l'album photo</a>
 
-    <h1>Bienvenue dans votre Espace parent</h1>
+	<h1>Bienvenue dans votre Espace parent</h1>
 
-<a href="{{ path('app_member_album') }}"><button type="button" class="btn btn-success">Accèder au photos de la session</button></a>
+	<div class="container">
+		<div class="row">
+			{% for post in posts %}
+
+				<div class="row p-5">
+					<a href="{{ path('app_blog', {slug:post.slug} ) }}" class="bloglink">
+						<h1>{{post.titre}}</h1>
+					</a>
+
+					{% if post.illustration == NULL %}
+
+						{% else %}
+							<div class="col-md-5"><img src="/uploads/{{post.illustration}}" alt="{{post.titre}}" class="img-fluid"></div>
+					{% endif %}
+
+
+					<div class="col">
+						{{post.contenu}}
+						<p class="text-end text-muted">{{post.auteur}}, le
+							{{post.date |date("d/m/Y")}}</p>
+					</div>
+
+				</div>
+				<hr>
+			{% endfor %}
+
+		</div>
+		<div class="pagination p-5">
+			{{ knp_pagination_render(posts) }}
+		</div>
+	</div>
 
 {% endblock %}

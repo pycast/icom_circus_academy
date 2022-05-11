@@ -1,0 +1,13 @@
+.modalcustom{
+    transition: transform .2s;
+}
+
+.modalcustom:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.bloglink {
+    text-transform: uppercase;
+    text-decoration: none;
+}

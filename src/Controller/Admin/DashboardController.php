@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Article;
 use App\Entity\Photo;
 use App\Entity\Session;
 use App\Entity\User;
@@ -16,20 +17,19 @@ class DashboardController extends AbstractDashboardController
 {
     public function __construct(
         private AdminUrlGenerator $adminUrlGenerator
-    ){
-
+    ) {
     }
 
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
-    //     $url = $this->adminUrlGenerator
-    //         ->setController(UserCrudController::class)
-    //         ->generateUrl();
+        //     $url = $this->adminUrlGenerator
+        //         ->setController(UserCrudController::class)
+        //         ->generateUrl();
 
-    //     return $this->redirect($url);
+        //     return $this->redirect($url);
 
-    return $this->render('admin/index.html.twig');
+        return $this->render('admin/index.html.twig');
     }
 
     public function configureDashboard(): Dashboard
@@ -43,6 +43,11 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::section('Clients:');
         yield MenuItem::linkToCrud('Créer une Session', 'fas fa-calendar', Session::class);
         yield MenuItem::linkToCrud('Créer un compte client', 'fa fa-user', User::class);
+        yield MenuItem::section('Blogging:');
+        yield MenuItem::linkToCrud('Rédiger un article', 'fas fa-blog', Article::class)
+            ->setController(ArticleCrudController::class);
+        // yield MenuItem::linkToCrud('Rédiger un article spécifique à une session', 'fas fa-flag', Article::class)
+        //     ->setController(SpecificArticleCrudController::class);
         yield MenuItem::section('Télécharger les photos:');
         yield MenuItem::linkToCrud('Importer des photos', 'fas fa-camera', Photo::class);
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);

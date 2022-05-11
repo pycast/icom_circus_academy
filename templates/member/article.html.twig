@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{article.titre}}
+	- Icom Circus
+{% endblock %}
+
+{% block body %}
+	<a href="{{ path('app_member') }}">Revenir au blog</a>
+
+	<div class="container">
+		<div class="row">
+			<h1>{{article.titre}}</h1>
+
+			{% if article.illustration == NULL %}
+
+				{% else %}
+					<div class="col-md-5"><img src="/uploads/{{article.illustration}}" alt="{{article.titre}}" class="img-fluid"></div>
+			{% endif %}
+
+
+			<div class="col">
+				{{article.contenu}}
+				<p class="text-end text-muted">{{article.auteur}}, le
+					{{article.date |date("d/m/Y")}}</p>
+			</div>
+
+		</div>
+	</div>
+{% endblock %}
