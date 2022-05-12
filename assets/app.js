@@ -42,12 +42,15 @@ window.onload = () => {
         initialView: 'dayGridMonth',
         firstDay: 1,
         locale: 'fr',
-        
+        buttonText: {
+          today: "Retour",
+        },
         timeZone: 'Europe/Paris',
         headerToolbar: {
-          left: 'prev,next',
+          left: 'today',
           center: 'title',
-          right: 'dayGridMonth,timeGridWeek'
+          right: 'prev,next',
+          
         },
         events: FullCalendarData
       });

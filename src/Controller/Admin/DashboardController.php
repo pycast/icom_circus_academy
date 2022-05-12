@@ -3,32 +3,21 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Article;
+use App\Entity\Dispo;
 use App\Entity\Photo;
 use App\Entity\Session;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
-use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DashboardController extends AbstractDashboardController
 {
-    public function __construct(
-        private AdminUrlGenerator $adminUrlGenerator
-    ) {
-    }
-
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
-        //     $url = $this->adminUrlGenerator
-        //         ->setController(UserCrudController::class)
-        //         ->generateUrl();
-
-        //     return $this->redirect($url);
-
         return $this->render('admin/index.html.twig');
     }
 
@@ -40,6 +29,8 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
+        yield MenuItem::section('Renseignez les disponibilités:');
+        yield MenuItem::linkToCrud('Ajouter une période', 'fas fa-calendar-check', Dispo::class);
         yield MenuItem::section('Clients:');
         yield MenuItem::linkToCrud('Créer une Session', 'fas fa-calendar', Session::class);
         yield MenuItem::linkToCrud('Créer un compte client', 'fa fa-user', User::class);

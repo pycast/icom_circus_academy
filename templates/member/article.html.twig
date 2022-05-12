@@ -20,7 +20,7 @@
 
 
 			<div class="col">
-				{{article.contenu}}
+				{{article.contenu |raw }}
 				<p class="text-end text-muted">{{article.auteur}}, le
 					{{article.date |date("d/m/Y")}}</p>
 			</div>
