@@ -40,13 +40,13 @@ class ReceiveController extends AbstractController
                 'backgroundColor' => 'green'
             ];
 
-            $events[] = [
-                'id' => 1,
-                'start' => $dispo->getStart()->format('Y-m-d'),
-                'end' => $dispo->getEnd()->format('Y-m-d'),
-                'display' => 'inverse-background',
-                'backgroundColor' => 'red'
-            ];
+            // $events[] = [
+            //     'id' => 1,
+            //     'start' => $dispo->getStart()->format('Y-m-d'),
+            //     'end' => $dispo->getEnd()->format('Y-m-d'),
+            //     'display' => 'inverse-background',
+            //     'backgroundColor' => 'red'
+            // ];
         }
 
 

@@ -4,8 +4,7 @@
 {% endblock %}
 
 {% block body %}
-	<a href="{{ path('app_member_album') }}">Accèder à l'album photo</a>
-
+	<div class="p-3"><a href="{{ path('app_member_album') }}"> <button class="btn btn-primary">Accèder à l'album photo</button></a></div>
 	<h1>Bienvenue dans votre Espace parent</h1>
 
 	<div class="container">
@@ -25,9 +24,12 @@
 
 
 					<div class="col">
-						{{post.contenu |raw}}
-						<p class="text-end text-muted">{{post.auteur}}, le
-							{{post.date |date("d/m/Y")}}</p>
+						{{post.contenu|u.truncate(1500, '...', false) |raw}}
+						{% if post.contenu|length > 1500 %}
+						<a href="{{ path('app_blog', {slug:post.slug} ) }}" class="bloglink">
+						en savoir plus
+					</a>
+					{% endif %}
 					</div>
 
 				</div>

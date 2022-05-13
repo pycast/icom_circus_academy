@@ -5,9 +5,9 @@
 
 {% block body %}
 
-	<a href="{{ path('app_member') }}">
-		Retour au blog de l'espace Parent
-	</a>
+	<div class="p-3"><a href="{{ path('app_member') }}">
+		<button class="btn btn-danger">Retour au blog de l'espace parent</button>
+	</a></div>
 
 	<h1>Consulter l'album de la session de votre enfant:</h1>
 
@@ -17,7 +17,7 @@
 
 				<div class="col-md-4 modalcustom">
 					<a data-bs-toggle="modal" data-bs-target="#myModal{{photo.id}}">
-						<img src="/uploads/{{photo.photoName}}" alt="" height="350px">
+						<img src="/uploads/{{photo.photoName}}" alt="" class="img-fluid">
 					</a>
 				</div>
 				<!-- Modal -->
@@ -34,6 +34,7 @@
 								<p class="text-disabled">{{photo.date|date("d/m/Y")}}</p>
 							</div>
 							<div class="modal-footer">
+								<a href="../uploads/{{photo.photoName}}" download="{{photo.photoName}}"><button class="btn btn-primary">Télécharger la photo  <img src="{{ asset('build/images/download.png') }}" alt="dlbtn" width='16px'></button></a>
 								<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fermer</button>
 							</div>
 						</div>

@@ -4,11 +4,17 @@
 
 {% block body %}
 <div class="present">
-  <h2>Icom vous présente un stage d’une semaine à la découverte d’un art vivant : Le cirque.</h2>
+  <h2>Icom vous présente la circus Academy</h2>
   <h3>Offrez aux enfants de votre ville une expérience unique.</h3>
 </div>
 
 <div class="container p-5">
+  <div class="row">
+    <div class="col">
+    <h2>La circus académie, c'est quoi?</h2>
+    <p>C'est une semaine à la découverte d’un art vivant : le cirque. Encadré par des artistes du cirque et des professionnels de l'animation, ils proposeront un programme adapté à leur âge.</p>
+    </div>
+  </div>
   <div class="row">
     <div class="cart aos-item col" data-aos="fade-up-right">
       <div class="highlight">
@@ -55,9 +61,8 @@
         <li>Ecoute</li>
         <li>Vivre ensemble</li>
         <li>Découverte de soi</li>
-        
-        <p>Notre équipe de passionnés est engagée au bien-être de vos enfants</p>
       </ul>
+      <p>Notre équipe de passionnés est engagée au bien-être de vos enfants</p>
     </div>
   </div>
 
@@ -115,7 +120,7 @@
       </div>
     </div>
   </div>
-  <a href="{{ path('app_receive') }}" class="link-dark text-center">Consulter les conditions de la reception de l'académie</a>
+  <div class="text-center"><a href="{{ path('app_receive') }}"><button class="btn btn-primary">Consulter les conditions de la reception de l'académie</button></a></div>
 </div>
 
 {% endblock %}
