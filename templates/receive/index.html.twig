@@ -78,37 +78,53 @@
 					<div class="card-body">
 						<h1 class="card-title">50 à 70<small class="text-muted fw-light">
 								enfants</small>
+								<br>
+								<img src="{{asset('build/images/2kids.png') }}" alt="kids" class="img-fluid">
 						</h1>
-						<p>6750€</p>
+						<br>
+						<h3>6750€</h3>
 					</div>
 				</div>
 			</div>
 			<div class="col">
-				<div class="card mb-4 rounded-3 shadow-sm">
+				<div class="card mb-4 rounded-3 shadow-sm pricingcard">
 					<div class="card-body">
 						<h1 class="card-title">70 à 100<small class="text-muted fw-light">
 								enfants</small>
+								<br>
+								<img src="{{asset('build/images/3kids.png') }}" alt="kids" class="img-fluid">
 						</h1>
-						<p>8550€</p>
+						<h3>8550€</h3>
 					</div>
 				</div>
 			</div>
 			<div class="col">
-				<div class="card mb-4 rounded-3 shadow-sm">
+				<div class="card mb-4 rounded-3 shadow-sm pricingcard">
 					<div class="card-body">
 						<h1 class="card-title">100 à 120<small class="text-muted fw-light">
 								enfants</small>
+								<br>
+								<img src="{{asset('build/images/4kids.png') }}" alt="kids" class="img-fluid">
 						</h1>
-						<p>9700€</p>
+						<br>
+						<h3>9700€</h3>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="text-center m-5">
 			<h1 class="fw-normal">Nos disponibilités</h1>
-			<div class="row p-5 calendarcol">
-				<div class="jsinfo" data-cal-data="{{data}}"></div>
-				<div id="calendar" class="w-80"></div>
+			<div class="row p-5">
+				<div class="col calendarcol">
+					<div class="jsinfo" data-cal-data="{{data}}"></div>
+					<div id="calendar"></div>
+				</div>
+					<div class="col">
+					<h3 class="text-center pt-5">Contact</h3>
+					<p><b>Bruno</b>: 07 76 79 08 67</p>
+					<p><b>Clara</b>: 06 52 77 24 37</p>
+					<p class="text-muted"><em>Zone verte = Disponibilité</em></p>
+					</div>
 			</div>
 		</div>
 	</div>
