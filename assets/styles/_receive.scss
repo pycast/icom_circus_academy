@@ -2,7 +2,7 @@
     background-image: linear-gradient(to right, rgba(255, 255, 255), rgba(255, 255, 255, 0)), url(/assets/images/recevoir_cirque.png);
     background-size: cover;
     color: #3f3f3f;
-    padding: 20vh 0;
+    padding: 22vh 0;
     font-family: var(--ff-title);
 }
 
@@ -17,4 +17,23 @@
 .calendarcol a {
     text-decoration: none;
     color: black;
+}
+
+.kiddies {
+    max-width: 70%;
+}
+
+.kiddies2 {
+    max-width: 80%;
+}
+
+.pricingcard {
+    height: 90%;
+
+    .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    }
 }

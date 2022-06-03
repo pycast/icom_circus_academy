@@ -30,6 +30,7 @@
 						<a class="nav-link" href="{{ path('app_receive') }}">Recevoir l'académie</a>
 						<a class="nav-link" href="{{ path('app_planning') }}">Planning</a>
 						{% if app.user %}
+							<p class="nav-link">|</p>
 							<a class="nav-link" href="{{ path('app_member') }}">Espace Parent</a>
 							<a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a>
 						{% else %}
@@ -47,16 +48,13 @@
 			</div>
 
 			{# FOOTER #}
-			<footer class="footer mt-auto py-3">
+			<footer class="footer mt-auto py-3 bg-light">
 				<div class="container">
 					<div class="row">
-						<div class="col">
-							Site proposé par ICOM Communication © - 2022
-						</div>
 						<div class="col text-end">
-							<a href="#">Administration</a>
-							<a href="#">COVID-19</a>
-							<a href="#">Mentions Légales</a>
+							Site proposé par
+							<a href="http://www.icom-communication.com/">ICOM Communication</a>
+							© - 2022
 						</div>
 					</div>
 				</div>
