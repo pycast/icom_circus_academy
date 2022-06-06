@@ -82,34 +82,37 @@
 
 /* TEAM ANIM */
 
-.teamanim .col {
-    background-color: var(--circus-purple);
-}
+.teamanim {
+    .col {
+        background-color: var(--circus-purple);
+    }
 
-.teamanim h1 {
-    font-family: var(--ff-title);
-}
-
-.teamanim img {
-    height: 250px;
-    width: auto;
-    clip-path: circle();
+    h1 {
+        font-family: var(--ff-title);
+    }
+    img {
+        height: 250px;
+        width: auto;
+        clip-path: circle();
+    }
+    p{
+        font-family: var(--ff-main);
+    }
 }
 
 /* ACTIVITES */
 
-.activitiescstm p {
-    font-size: 25px;
-    font-family: var(--ff-main);
-}
-
-.activitiescstm h1 {
-    font-family: var(--ff-title);
-}
-
-.activitiescstm img {
-    object-fit: cover;
-    object-position: center;
+.activitiescstm{ 
+    p {
+        font-family: var(--ff-main);
+    }
+    h1 {
+        font-family: var(--ff-title);
+    }
+    img {
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
 @media screen and (max-width:1000px) {
