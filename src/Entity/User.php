@@ -26,7 +26,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $password;
 
     #[ORM\ManyToOne(targetEntity: Session::class, inversedBy: 'users')]
-    #[ORM\JoinColumn(nullable: false)]
     private $Session;
 
     public function getId(): ?int

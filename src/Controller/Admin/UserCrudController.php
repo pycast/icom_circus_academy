@@ -18,7 +18,8 @@ class UserCrudController extends AbstractCrudController
     {
         return [
             TextField::new('username', "Définir un nom d'utilisateur"),
-            AssociationField::new('Session', "Session de l'académie"),
+            AssociationField::new('Session', "Session de l'académie")
+                ->setRequired(true),
             TextField::new('password', "Mot de passe"),
         ];
     }

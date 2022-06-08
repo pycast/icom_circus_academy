@@ -26,6 +26,10 @@ class MemberController extends AbstractController
     public function index(PaginatorInterface $paginator, Request $request): Response
     {
 
+        if ($this->isGranted('ROLE_ADMIN')) {
+            return $this->redirectToRoute("admin");
+        }
+
         $generalposts = $paginator->paginate(
             $this->entityManager->getRepository(Article::class)->findAll(),
             $request->query->getInt('page', 1),
@@ -54,6 +58,10 @@ class MemberController extends AbstractController
     #[Route('/EspaceParent/Album', name: 'app_member_album')]
     public function show(): Response
     {
+
+        if ($this->isGranted('ROLE_ADMIN')) {
+            return $this->redirectToRoute("admin");
+        }
 
         $userSession = $this->getUser()->getSession()->getId();
 
