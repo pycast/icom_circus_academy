@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Photo index
+{% endblock %}
+
+{% block body %}
+	<h1>Photo index</h1>
+
+	<a href="{{ path('app_photo_new') }}">Ajouter de nouvelles photos</a>
+	<br>
+	<br>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Description</th>
+				<th>Photo</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for image in images %}
+				<tr>
+					<td>{{ image.photo.date ? image.photo.date|date('Y-m-d') : '' }}</td>
+					<td>{{ image.photo.description }}</td>
+					<td><img src="/uploads/{{ image.name }}" alt="kid" width="150px"></td>
+					<td class="align-middle">
+						{{ include('photo/_delete_form.html.twig') }}
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="6">Aucune photo pour l'instant</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

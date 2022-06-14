@@ -5,6 +5,7 @@ namespace App\Controller;
 use PDO;
 use App\Entity\Photo;
 use App\Entity\Article;
+use App\Entity\Image;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -66,10 +67,12 @@ class MemberController extends AbstractController
         $userSession = $this->getUser()->getSession()->getId();
 
         $photos = $this->entityManager->getRepository(Photo::class)->findBy(['Session' => $userSession]);
+        $img = $this->entityManager->getRepository(Image::class)->findBy(['photo' => $photos]);
 
         return $this->render('member/album.html.twig', [
             'controller_name' => 'MemberController',
-            'photos' => $photos
+            'photos' => $photos,
+            'images' => $img
         ]);
     }
 }

@@ -5,23 +5,25 @@
 
 {% block body %}
 
-	<div class="p-3"><a href="{{ path('app_member') }}">
-		<button class="btn btn-danger">Retour au blog de l'espace parent</button>
-	</a></div>
+	<div class="p-3">
+		<a href="{{ path('app_member') }}">
+			<button class="btn btn-danger">Retour au blog de l'espace parent</button>
+		</a>
+	</div>
 
 	<h1>Consulter l'album de la session de votre enfant:</h1>
 
 	<div class="container p-5">
 		<div class="row">
-			{% for photo in photos %}
+			{% for image in images %}
 
 				<div class="col-md-4 modalcustom">
-					<a data-bs-toggle="modal" data-bs-target="#myModal{{photo.id}}">
-						<img src="/uploads/{{photo.photoName}}" alt="" class="img-fluid">
+					<a data-bs-toggle="modal" data-bs-target="#myModal{{image.id}}">
+						<img src="/uploads/{{image.name}}" alt="" class="img-fluid">
 					</a>
 				</div>
 				<!-- Modal -->
-				<div class="modal fade" id="myModal{{photo.id}}" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal fade" id="myModal{{image.id}}" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -29,12 +31,15 @@
 								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-								<img src="/uploads/{{photo.photoName}}" alt="" class="img-fluid">
-								<p>{{photo.description}}</p>
-								<p class="text-disabled">{{photo.date|date("d/m/Y")}}</p>
+								<img src="/uploads/{{image.name}}" alt="" class="img-fluid">
+								<p>{{image.photo.description}}</p>
+								<p class="text-disabled">{{image.photo.date|date("d/m/Y")}}</p>
 							</div>
 							<div class="modal-footer">
-								<a href="../uploads/{{photo.photoName}}" download="{{photo.photoName}}"><button class="btn btn-primary">Télécharger la photo  <img src="{{ asset('build/images/download.png') }}" alt="dlbtn" width='16px'></button></a>
+								<a href="../uploads/{{image.name}}" download="{{image.name}}">
+									<button class="btn btn-primary">Télécharger la photo
+										<img src="{{ asset('build/images/download.png') }}" alt="dlbtn" width='16px'></button>
+								</a>
 								<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fermer</button>
 							</div>
 						</div>
