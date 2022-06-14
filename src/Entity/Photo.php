@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\PhotoRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 #[ORM\Entity(repositoryClass: PhotoRepository::class)]
 class Photo
@@ -25,6 +26,10 @@ class Photo
 
     #[ORM\Column(type: 'string', length: 255)]
     private $photoName;
+
+    #[ORM\Column(type: 'datetime_immutable')]
+    #[Gedmo\Timestampable(on: "create")]
+    private $createdAt;
 
     public function getId(): ?int
     {
@@ -75,6 +80,18 @@ class Photo
     public function setPhotoName(string $photoName): self
     {
         $this->photoName = $photoName;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeImmutable $createdAt): self
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }
