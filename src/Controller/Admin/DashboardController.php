@@ -37,8 +37,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::section('Blogging:');
         yield MenuItem::linkToCrud('Rédiger un article', 'fas fa-blog', Article::class)
             ->setController(ArticleCrudController::class);
-        // yield MenuItem::linkToCrud('Rédiger un article spécifique à une session', 'fas fa-flag', Article::class)
-        //     ->setController(SpecificArticleCrudController::class);
         yield MenuItem::section('Télécharger les photos:');
         yield MenuItem::linkToUrl('Importer des photos', 'fas fa-camera', 'photo');
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);

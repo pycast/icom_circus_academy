@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use PDO;
 use App\Entity\Photo;
 use App\Entity\Article;
 use App\Entity\Image;

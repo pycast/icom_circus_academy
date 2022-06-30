@@ -67,17 +67,16 @@
     padding: 20vh 0;
 }
 
-.cropped1 {
-    width: 700px; /* width of container */
-    height: 700px; /* height of container */
-    object-fit: cover;
-}
+// .cropped1 {
+//     width: 700px; /* width of container */
+//     height: 700px; /* height of container */
+//     object-fit: cover;
+// }
 
 
 .row-pedagogie{
     background-color: rgba(255, 57, 57);
     font-family: var(--ff-main);
-    font-size: 24px;
 }
 
 /* TEAM ANIM */
@@ -120,11 +119,20 @@
     background-position: right;
     padding: 15vh;
     }
+
 }
 
 @media screen and (max-width:700px) {
-    .present{
+    .present {
     background-position: center;
     padding: 10vh;
+    }
+    .teamanim {
+        img {
+            height: 100px;
+        }
+    }
+    .equipe-peda {
+        display: none;
     }
 }

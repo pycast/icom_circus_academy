@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ImageRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: ImageRepository::class)]
 class Image
@@ -17,6 +18,9 @@ class Image
     #[ORM\JoinColumn(nullable: false)]
     private $photo;
 
+    #[Assert\File(
+        mimeTypes: ["application/jpg", "application/png", "application/gif"],
+    )]
     #[ORM\Column(type: 'string', length: 255)]
     private $name;
 

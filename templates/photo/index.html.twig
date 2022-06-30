@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Photo index
+{% block title %}Index des photos
 {% endblock %}
 
 {% block body %}
-	<h1>Photo index</h1>
+	<h1>Index des photos</h1>
 
 	<a href="{{ path('app_photo_new') }}">Ajouter de nouvelles photos</a>
 	<br>
@@ -12,6 +12,7 @@
 	<table class="table">
 		<thead>
 			<tr>
+				<th>Session</th>
 				<th>Date</th>
 				<th>Description</th>
 				<th>Photo</th>
@@ -21,6 +22,7 @@
 		<tbody>
 			{% for image in images %}
 				<tr>
+					<td>{{ image.photo.session }}</td>
 					<td>{{ image.photo.date ? image.photo.date|date('Y-m-d') : '' }}</td>
 					<td>{{ image.photo.description }}</td>
 					<td><img src="/uploads/{{ image.name }}" alt="kid" width="150px"></td>
@@ -33,6 +35,7 @@
 					<td colspan="6">Aucune photo pour l'instant</td>
 				</tr>
 			{% endfor %}
+
 		</tbody>
 	</table>
 {% endblock %}

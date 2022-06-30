@@ -4,26 +4,27 @@
 {% endblock %}
 
 {% block body %}
-	<div class="present">
-		<h2>Icom vous présente la circus Academy</h2>
-		<h3>Offrez aux enfants de votre ville une expérience unique.</h3>
+	<div class="containerfluid">
+		<div class="present">
+			<h2>Icom vous présente la circus Academy</h2>
+			<h3>Offrez aux enfants de votre ville une expérience unique.</h3>
+		</div>
 	</div>
-
 	<div class="container p-3">
 		<div class="row p-3">
 			<div class="col">
 				<section class="about">
-					<h2>La circus académie, c'est quoi?</h2>
-					<p class="fs-5">C'est une semaine à la découverte d’un art vivant : le cirque. Encadré par des artistes du cirque et des professionnels de l'animation, ils proposeront un programme adapté à leur âge.</p>
+					<h2 class="fw-bold">La circus académie, c'est quoi?</h2>
+					<p class="fs-4">C'est une semaine à la découverte d’un art vivant : le cirque. Encadré par des artistes du cirque et des professionnels de l'animation, ils proposeront un programme adapté à leur âge.</p>
 					<div class="text-center">
 						<a href="{{ path('app_planning') }}">
-							<button class="btn btn-primary">Consulter le planning d'une semaine</button>
+							<button class="btn btn-primary fs-3">Consulter le planning d'une semaine</button>
 						</a>
 					</div>
 				</section>
 			</div>
 		</div>
-		<div class="row p-3">
+		<div class="row pt-5">
 			<div class="cart aos-item col" data-aos="fade-up-right">
 				<div class="highlight">
 					<div class="highlight1 mx-auto">
@@ -53,86 +54,87 @@
 
 		</div>
 	</div>
+	<div class="containerfluid">
+		<div class="row row-pedagogie rounded mt-3">
+			<div
+				class="col equipe-peda rounded-start">{# bg-photo #}
+			</div>
+			<div class="col">
+				<h2>
+					<b>Culturel, social, éducatif et pédagogique</b>, l'académie est une aventure pour vos enfants.</h2>
+				<br>
+				<ul class="fs-4">
+					<li>Cohésion</li>
+					<li>Confiance</li>
+					<li>Entre-aide</li>
+					<li>Ecoute</li>
+					<li>Vivre ensemble</li>
+					<li>Découverte de soi</li>
+				</ul>
+				<p class="fs-4">Notre équipe de passionnés est engagée au bien-être de vos enfants</p>
+			</div>
+		</div>
 
-	<div class="row row-pedagogie rounded mt-3">
-		<div
-			class="col equipe-peda rounded-start">{# bg-photo #}
+		<div class="row p-2 teamanim text-center rounded m-5 fs-4">
+			<h1>
+				Notre équipe
+			</h1>
+			<section class="p-2"></section>
+			<div class="col m-2 p-3 rounded">
+				<img src="{{asset('build/images/anim1.png') }}" alt="anim1">
+				<br>
+				<b>Jérôme, notre directeur</b>
+				<p>Expert en vacances réussies</p>
+			</div>
+			<div class="col m-2 p-3 rounded">
+				<img src="{{asset('build/images/anim2.png') }}" alt="anim2">
+				<br>
+				<b>Ludivine, notre adjointe de direction</b>
+				<p>Experte en bonne humeur</p>
+			</div>
+			<div class="col m-2 p-3 rounded">
+				<img src="{{asset('build/images/anim3.png') }}" alt="anim3">
+				<br>
+				<b>Clémence, notre infirmière</b>
+				<p>Experte en bobos</p>
+			</div>
 		</div>
-		<div class="col">
-			<h2>
-				<b>Culturel, social, éducatif et pédagogique</b>, l'académie est une aventure pour vos enfants.</h2>
-			<br>
-			<ul>
-				<li>Cohésion</li>
-				<li>Confiance</li>
-				<li>Entre-aide</li>
-				<li>Ecoute</li>
-				<li>Vivre ensemble</li>
-				<li>Découverte de soi</li>
-			</ul>
-			<p>Notre équipe de passionnés est engagée au bien-être de vos enfants</p>
-		</div>
-	</div>
 
-	<div class="row p-2 teamanim text-center rounded m-5">
-		<h1>
-			Notre équipe
-		</h1>
-		<section class="p-2"></section>
-		<div class="col m-2 p-3 rounded">
-			<img src="{{asset('build/images/anim1.png') }}" alt="anim1">
-			<br>
-			<b>Jérôme, notre directeur</b>
-			<p>Expert en vacances réussies</p>
-		</div>
-		<div class="col m-2 p-3 rounded">
-			<img src="{{asset('build/images/anim2.png') }}" alt="anim2">
-			<br>
-			<b>Ludivine, notre adjointe de direction</b>
-			<p>Experte en bonne humeur</p>
-		</div>
-		<div class="col m-2 p-3 rounded">
-			<img src="{{asset('build/images/anim3.png') }}" alt="anim3">
-			<br>
-			<b>Clémence, notre infirmière</b>
-			<p>Experte en bobos</p>
-		</div>
-	</div>
-
-	<div class="row text-center activitiescstm m-3">
-		<h1 class="p-2">Quelques disciplines proposées durant cette semaine :</h1>
-		<div class="col cart aos-item" data-aos="fade-up-right">
-			<div class="card">
-				<img src="{{asset('build/images/boy_juggling.png') }}" alt="enfant jonglant" class="card-img-top" height="350px">
-				<div class="card-body">
-					<h3 class="card-title">Jonglage:</h3>
-					<p class="card-text fs-5">balles, foulard, massues, anneaux, hula-hoop, diabolos, massues en feu...</p>
+		<div class="row text-center activitiescstm m-3">
+			<h1 class="p-2">Quelques disciplines proposées durant cette semaine</h1>
+			<div class="col-sm cart aos-item" data-aos="fade-up-right">
+				<div class="card">
+					<img src="{{asset('build/images/boy_juggling.png') }}" alt="enfant jonglant" class="card-img-top" height="350px">
+					<div class="card-body">
+						<h3 class="card-title">Jonglage:</h3>
+						<p class="card-text fs-5">balles, foulard, massues, anneaux, hula-hoop, diabolos, massues en feu...</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm cart aos-item" data-aos="fade-up">
+				<div class="card">
+					<img src="{{asset('build/images/rolarola.png') }}" alt="enfant rolarolant" class="card-img-top" height="350px">
+					<div class="card-body">
+						<h3 class="card-title">Acrobaties:</h3>
+						<p class="card-text fs-5">au sol, numéros aériens (trapèze, corde, anneaux), fil de fer...</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm cart aos-item" data-aos="fade-up-left">
+				<div class="card">
+					<img src="{{asset('build/images/extreme.png') }}" alt="enfant feu" class="card-img-top" height="350px">
+					<div class="card-body">
+						<h3 class="card-title">Fakir:</h3>
+						<p class="card-text fs-5">Marche sur le verre, marche sur clous, cracheur de feu...</p>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col cart aos-item" data-aos="fade-up">
-			<div class="card">
-				<img src="{{asset('build/images/rolarola.png') }}" alt="enfant rolarolant" class="card-img-top" height="350px">
-				<div class="card-body">
-					<h3 class="card-title">Acrobaties:</h3>
-					<p class="card-text fs-5">au sol, numéros aériens (trapèze, corde, anneaux), fil de fer...</p>
-				</div>
-			</div>
-		</div>
-		<div class="col cart aos-item" data-aos="fade-up-left">
-			<div class="card">
-				<img src="{{asset('build/images/extreme.png') }}" alt="enfant feu" class="card-img-top" height="350px">
-				<div class="card-body">
-					<h3 class="card-title">Fakir:</h3>
-					<p class="card-text fs-5">Marche sur le verre, marche sur clous, cracheur de feu...</p>
-				</div>
-			</div>
-		</div>
-	</div>
 
-	<div class="text-center">
-		<a href="{{ path('app_receive') }}">
-			<button class="btn btn-primary">Consulter les conditions de la reception de l'académie</button>
-		</a>
+		<div class="text-center">
+			<a href="{{ path('app_receive') }}">
+				<button class="btn btn-primary fs-3">Consulter les conditions de la reception de l'académie</button>
+			</a>
+		</div>
 	</div>
 </div>{% endblock %}

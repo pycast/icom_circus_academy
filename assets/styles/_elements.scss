@@ -1,15 +1,13 @@
-body{
-    min-height: 100vh;
+html, body{
+    width: 100%;
     overflow-x: hidden;
     // background: linear-gradient(to right top, var(--circus-purple), var(--circus-blue));
     color: black;
     position: relative;
-    font-size: 16px;
 }
 
 .navbar {
     background-color: var(--circus-purple);
-    font-size: 28px;
 
     .login {
         fill:white;
@@ -40,4 +38,10 @@ footer{
     bottom:0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.596);
+}
+
+@media screen and (max-width:992px) {
+    p.nav-link.bar {
+        display: none;
+    }
 }

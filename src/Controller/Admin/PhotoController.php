@@ -75,6 +75,23 @@ class PhotoController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $images = $form->get('image')->getData();
+
+            // dd($images);
+            foreach ($images as $image) {
+                $fichier = md5(uniqid()) . '.' . $image->guessExtension();
+
+                $image->move(
+                    $this->getParameter(
+                        'images_directory'
+                    ),
+                    $fichier
+                );
+
+                $img = new Image;
+                $img->setName($fichier);
+                $photo->addImage($img);
+            }
             $photoRepository->add($photo);
             return $this->redirectToRoute('app_photo_index', [], Response::HTTP_SEE_OTHER);
         }
